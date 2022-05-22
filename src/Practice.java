@@ -1,7 +1,9 @@
 public class Practice {
     public static void main(String[] args) {
-        int minValue = Integer.MIN_VALUE;
-        int maxValue = Integer.MAX_VALUE;
-        System.out.println(minValue + " " + maxValue);
+        double poundValue = 5.0;
+        double onePoundEqualKg = 0.45359237;
+        double resultKg;
+        resultKg = onePoundEqualKg * poundValue;
+        System.out.println(resultKg);
     }
 }
