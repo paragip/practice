@@ -1,18 +1,31 @@
 public class Practice {
     public static void main(String[] args) {
+        int position = calculateHighScorePosition(1500);
+        displayHighScorePosition("Palcsi", position);
 
-        calculateScore(false, 10000, 8, 200);
+        position = calculateHighScorePosition(900);
+        displayHighScorePosition("Terike", position);
 
-        calculateScore(true, 15000, 10, 200);
+        position = calculateHighScorePosition(400);
+        displayHighScorePosition("Pistike", position);
 
-
+        position = calculateHighScorePosition(50);
+        displayHighScorePosition("Sanyesz", position);
     }
-    public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus){
-        if (gameOver) {
-            int finalScore = score + levelCompleted * bonus;
-            System.out.println("final score = " + finalScore);
+    public static void displayHighScorePosition(String nameOfPlayers, int position){
+        System.out.println(nameOfPlayers + " managed to get into position " + position + " on the high score table");
+    }
+    public static int calculateHighScorePosition(int scoreOfPlayer){
+
+        if (scoreOfPlayer >= 1000) {
+            return 1;
+        } else if (scoreOfPlayer >= 500) {
+            return 2;
+        } else if (scoreOfPlayer >= 100) {
+            return 3;
         } else {
-            System.out.println("the game has not ended");
+            return 4;
         }
+
     }
 }
