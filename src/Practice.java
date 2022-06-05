@@ -1,31 +1,14 @@
 public class Practice {
+
     public static void main(String[] args) {
-        int position = calculateHighScorePosition(1500);
-        displayHighScorePosition("Palcsi", position);
-
-        position = calculateHighScorePosition(900);
-        displayHighScorePosition("Terike", position);
-
-        position = calculateHighScorePosition(400);
-        displayHighScorePosition("Pistike", position);
-
-        position = calculateHighScorePosition(50);
-        displayHighScorePosition("Sanyesz", position);
+        System.out.println("Even or not? " + isEvenNumber(2));
     }
-    public static void displayHighScorePosition(String nameOfPlayers, int position){
-        System.out.println(nameOfPlayers + " managed to get into position " + position + " on the high score table");
-    }
-    public static int calculateHighScorePosition(int scoreOfPlayer){
 
-        if (scoreOfPlayer >= 1000) {
-            return 1;
-        } else if (scoreOfPlayer >= 500) {
-            return 2;
-        } else if (scoreOfPlayer >= 100) {
-            return 3;
-        } else {
-            return 4;
+    public static boolean isEvenNumber (int number) {
+        if (number % 2 == 0 && number != 0) {
+            return true;
         }
-
+        return false;
     }
+
 }
